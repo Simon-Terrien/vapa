@@ -1,71 +1,75 @@
-# vapa README
+# LangChain Repository Analyzer for VS Code
 
-This is the README for your extension "vapa". After writing up a brief description, we recommend including the following sections.
+A VS Code extension that uses LangChain to analyze and visualize your codebase.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Repository Analysis
+- Analyze entire repositories to get insights about code quality, structure, and potential issues
+- Generate dependency graphs to visualize relationships between modules
+- Get recommendations for improving code organization
 
-For example if there is an image subfolder under your extension project workspace:
+### File Analysis
+- Analyze individual files for code quality and complexity
+- Generate comprehensive documentation for your code
+- Get suggestions for improving code readability and performance
 
-\!\[feature X\]\(images/feature-x.png\)
+### Code Assistance
+- Generate test cases for your functions and classes
+- Measure code complexity with detailed metrics
+- Add proper documentation to undocumented code
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Visualizations
+- View dependency graphs of your code
+- See code quality metrics in interactive charts
+- Analyze file type distribution in your projects
+
+## Commands
+
+The extension provides the following commands:
+
+- **LangChain: Analyze Repository** - Analyzes the entire workspace folder
+- **LangChain: Analyze Current File** - Analyzes the currently open file
+- **LangChain: Generate Dependency Graph** - Creates a visualization of file dependencies
+- **LangChain: Analyze Code Complexity** - Measures complexity metrics of current file
+- **LangChain: Generate Test Cases** - Creates test cases for functions in current file
+- **LangChain: Document Code** - Adds comprehensive documentation to your code
+
+## Getting Started
+
+1. Install the extension from the VS Code Marketplace
+2. Open a project folder in VS Code
+3. Configure your OpenAI API key in the extension settings
+4. Right-click on a file or folder and select one of the LangChain commands
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- VS Code 1.80.0 or higher
+- OpenAI API key
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `langchainRepoAnalyzer.apiKey`: Your OpenAI API key
+* `langchainRepoAnalyzer.maxFilesToAnalyze`: Maximum number of files to analyze in a repository (default: 50)
 
-## Known Issues
+## How It Works
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+This extension uses LangChain to orchestrate multiple AI-powered analysis operations:
 
-## Release Notes
+1. It reads your code files and extracts their content
+2. The content is processed using LangChain with OpenAI models
+3. The results are presented in readable Markdown documents or interactive visualizations
 
-Users appreciate release notes as you update your extension.
+## Privacy and Security
 
-### 1.0.0
+Your code is sent to OpenAI's API for analysis. Please review OpenAI's privacy policy. You can limit what files are analyzed by adjusting the maxFilesToAnalyze setting.
 
-Initial release of ...
+## Contributing
 
-### 1.0.1
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Fixed issue #.
+## License
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the MIT License.
